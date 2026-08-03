@@ -13,7 +13,7 @@ export const siteConfig = {
     "Cure Connect is an integrated healthcare platform available on Android and iOS, designed to simplify access to healthcare services. Our platform connects patients, ambulances, hospitals, doctors, and diagnostic centers through a single ecosystem. We focus on reducing delays in emergency situations while improving everyday healthcare coordination.",
   vision:
     "Our vision is to make healthcare support more accessible, connected, and efficient across India — starting close to home and growing thoughtfully.",
-  partnerRegistrationUrl: "https://partners.cureconnect.app",
+  partnerRegistrationUrl: "https://cureconnecthospital.pages.dev/login",
   whatsappCommunityUrl:
     "https://chat.whatsapp.com/Lfjc3lKBhrL4qn9Chwjy3q?s=qt&p=i&ilr=0&amv=2",
   instagramUrl:
