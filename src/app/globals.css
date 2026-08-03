@@ -1,0 +1,266 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #040b08;
+  --bg-elevated: #07130e;
+  --bg-card: #0b1411;
+  --cure-green: #10b981;
+  --cure-green-bright: #34d399;
+  --cure-green-deep: #047857;
+  --cure-red: #ef4444;
+  --cure-red-deep: #7f1d1d;
+  --cure-amber: #92400e;
+  --cure-brown: #78350f;
+  --text: #ffffff;
+  --text-muted: rgba(255, 255, 255, 0.62);
+  --text-dim: rgba(255, 255, 255, 0.45);
+  --border: rgba(255, 255, 255, 0.1);
+  --border-green: rgba(16, 185, 129, 0.3);
+}
+
+@theme inline {
+  --color-background: var(--bg);
+  --color-foreground: var(--text);
+  --color-cure-green: var(--cure-green);
+  --color-cure-green-bright: var(--cure-green-bright);
+  --color-cure-red: var(--cure-red);
+  --font-sans: var(--font-body);
+  --font-display: var(--font-display);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: clip;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body), system-ui, sans-serif;
+  overflow-x: clip;
+}
+
+::selection {
+  background: rgba(16, 185, 129, 0.35);
+  color: white;
+}
+
+.font-display {
+  font-family: var(--font-display), Georgia, serif;
+}
+
+.text-gradient-green {
+  background: linear-gradient(135deg, #34d399 0%, #10b981 55%, #6ee7b7 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.glass {
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.06),
+    rgba(255, 255, 255, 0.02)
+  );
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border);
+}
+
+.glass-red {
+  background: linear-gradient(
+    160deg,
+    rgba(239, 68, 68, 0.22),
+    rgba(127, 29, 29, 0.35)
+  );
+  border: 1px solid rgba(239, 68, 68, 0.28);
+}
+
+.glass-brown {
+  background: linear-gradient(
+    160deg,
+    rgba(146, 64, 14, 0.28),
+    rgba(120, 53, 15, 0.35)
+  );
+  border: 1px solid rgba(146, 64, 14, 0.3);
+}
+
+.glass-amber {
+  background: linear-gradient(
+    160deg,
+    rgba(180, 120, 40, 0.22),
+    rgba(146, 64, 14, 0.3)
+  );
+  border: 1px solid rgba(180, 120, 40, 0.28);
+}
+
+.glass-green {
+  background: linear-gradient(
+    160deg,
+    rgba(4, 120, 87, 0.3),
+    rgba(16, 185, 129, 0.05)
+  );
+  border: 1px solid rgba(16, 185, 129, 0.25);
+}
+
+.bg-atmosphere {
+  background:
+    radial-gradient(ellipse 70% 50% at 15% 0%, rgba(16, 185, 129, 0.12), transparent 55%),
+    radial-gradient(ellipse 50% 40% at 90% 20%, rgba(239, 68, 68, 0.08), transparent 50%),
+    var(--bg);
+}
+
+.bg-emergency {
+  background:
+    radial-gradient(ellipse 60% 50% at 25% 40%, rgba(239, 68, 68, 0.18), transparent 55%),
+    radial-gradient(ellipse 50% 40% at 80% 70%, rgba(16, 185, 129, 0.12), transparent 50%),
+    #040b08;
+}
+
+.section-pad {
+  padding-block: clamp(3.5rem, 9vw, 7.5rem);
+  padding-inline: clamp(1rem, 4vw, 2rem);
+}
+
+/* Clears the fixed header and gives page heroes breathing room */
+.page-hero-pad {
+  padding-top: clamp(6.5rem, 12vw, 9.5rem);
+}
+
+.container-cc {
+  width: 100%;
+  max-width: 72rem;
+  margin-inline: auto;
+}
+
+/* Soften oversized display headings on very narrow viewports */
+@media (max-width: 379px) {
+  .font-display.text-4xl {
+    font-size: 1.85rem;
+    line-height: 1.12;
+  }
+}
+
+.launch-pulse {
+  animation: launch-pulse 2.4s ease-in-out infinite;
+}
+
+@keyframes launch-pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.45);
+  }
+  50% {
+    box-shadow: 0 0 0 8px rgba(16, 185, 129, 0);
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-track {
+  animation: marquee 28s linear infinite;
+}
+
+.connection-line {
+  stroke-dasharray: 1.4 2.2;
+  animation: line-flow 1.8s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .connection-line {
+    animation: none;
+    stroke-dasharray: none;
+  }
+}
+
+@keyframes line-flow {
+  to {
+    stroke-dashoffset: -14.4;
+  }
+}
+
+.phone-frame {
+  border-radius: clamp(2.4rem, 9vw, 3.4rem);
+  border: 1px solid #2c2c2e;
+  background: linear-gradient(150deg, #26262a 0%, #0b0b0d 18%, #0b0b0d 82%, #1d1d20 100%);
+  padding: clamp(6px, 2.6%, 11px);
+  line-height: 0;
+  box-shadow:
+    0 40px 90px -30px rgba(0, 0, 0, 0.9),
+    0 0 0 1px rgba(0, 0, 0, 0.85),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.07);
+}
+
+/* Dynamic Island */
+.phone-frame::after {
+  content: "";
+  position: absolute;
+  top: clamp(15px, 4.6%, 24px);
+  left: 50%;
+  transform: translateX(-50%);
+  width: 26%;
+  aspect-ratio: 3.4 / 1;
+  border-radius: 999px;
+  background: #000;
+  box-shadow: inset 0 0 2px 1px rgba(255, 255, 255, 0.08);
+  z-index: 2;
+}
+
+.phone-frame img {
+  border-radius: clamp(1.9rem, 7.4vw, 2.75rem);
+  vertical-align: top;
+}
+
+/* Side buttons: mute + volume (left) */
+.phone-wrap::before {
+  content: "";
+  position: absolute;
+  top: 16%;
+  left: -3px;
+  width: 3px;
+  height: 3.2%;
+  border-radius: 3px 0 0 3px;
+  background: linear-gradient(90deg, #3a3a3e, #17171a);
+  box-shadow:
+    0 46px 0 0 #232327,
+    0 84px 0 0 #232327;
+  z-index: 3;
+}
+
+/* Side button: power (right) */
+.phone-wrap::after {
+  content: "";
+  position: absolute;
+  top: 22%;
+  right: -3px;
+  width: 3px;
+  height: 5.5%;
+  border-radius: 0 3px 3px 0;
+  background: linear-gradient(270deg, #3a3a3e, #17171a);
+  z-index: 3;
+}
+
+@media (pointer: fine) {
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--bg);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(16, 185, 129, 0.35);
+    border-radius: 999px;
+    border: 2px solid var(--bg);
+  }
+}
