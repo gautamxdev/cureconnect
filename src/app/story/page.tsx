@@ -5,6 +5,7 @@ import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Our Story",
+  alternates: { canonical: "/story" },
   description:
     "Meet Gauri Kolhe, Founder of Cure Connect — an integrated healthcare platform by PHDC PRIVATE LIMITED.",
 };
@@ -48,7 +49,7 @@ export default function StoryPage() {
                 <p className="mt-2 text-sm font-medium text-[var(--cure-green)]">
                   {siteConfig.founderTitle}
                 </p>
-                <p className="mt-1 text-sm text-white/40">{siteConfig.legalName}</p>
+                <p className="mt-1 text-sm text-white/50">{siteConfig.legalName}</p>
                 <p className="mt-6 text-base leading-relaxed text-white/65">
                   Cure Connect was founded by Gauri Kolhe with a vision to create a more connected
                   approach to healthcare access. Through Cure Connect, the goal is to bring

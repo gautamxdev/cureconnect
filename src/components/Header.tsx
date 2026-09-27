@@ -21,10 +21,6 @@ export function Header() {
   }, []);
 
   useEffect(() => {
-    setOpen(false);
-  }, [pathname]);
-
-  useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";
     return () => {
       document.body.style.overflow = "";
@@ -43,7 +39,7 @@ export function Header() {
       }`}
     >
       <div className="container-cc flex items-center justify-between gap-2 px-4 py-2.5 sm:gap-4 sm:px-5 sm:py-3.5 md:px-8">
-        <BrandLogo className="min-w-0 shrink" />
+        <BrandLogo className="min-w-0 shrink" priority />
 
         <nav className="hidden items-center gap-0.5 xl:gap-1 lg:flex" aria-label="Primary">
           {siteConfig.nav.map((item) => (
@@ -65,12 +61,9 @@ export function Header() {
         </nav>
 
         <div className="flex shrink-0 items-center gap-2">
-          <Button
-            href={siteConfig.partnerRegistrationUrl}
-            external
-            variant="partner"
-            className="hidden lg:inline-flex"
-          />
+          <div className="hidden lg:block">
+            <Button href={siteConfig.partnerRegistrationUrl} external variant="partner" />
+          </div>
           <button
             type="button"
             className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/15 bg-white/5 text-white sm:h-11 sm:w-11 lg:hidden"
@@ -98,6 +91,7 @@ export function Header() {
             <Link
               key={item.href}
               href={item.href}
+              onClick={() => setOpen(false)}
               className={`rounded-xl px-4 py-3.5 text-base font-medium ${
                 isActive(item.href)
                   ? "bg-[var(--cure-green)]/15 text-white"

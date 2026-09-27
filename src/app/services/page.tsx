@@ -11,6 +11,7 @@ import { FadeIn } from "@/components/FadeIn";
 
 export const metadata: Metadata = {
   title: "Our Services",
+  alternates: { canonical: "/services" },
   description:
     "Explore Cure Connect healthcare services: emergency ambulance, doctor appointments, home diagnostics, and a connected healthcare ecosystem.",
 };
@@ -29,7 +30,7 @@ const services = [
     key: "ambulance",
     title: "Emergency Ambulance Services",
     description:
-      "Our initial launch focus. Cure Connect aims to simplify the process of finding and connecting with ambulance services through technology, helping people access timely transportation support when it matters most.",
+      "Our primary service focus. Cure Connect aims to simplify the process of finding and connecting with ambulance services through technology, helping people access timely transportation support when it matters most.",
     icon: Ambulance,
     img: "/images/ambulance.jpg",
     tone: "border-[#ef4444]/30",
@@ -118,7 +119,7 @@ export default function ServicesPage() {
                     <div className="absolute inset-0 bg-gradient-to-t from-[#040B08]/85 via-[#040B08]/40 to-transparent" />
                     {service.featured ? (
                       <span className="absolute left-4 top-4 rounded-full border border-[#ef4444]/50 bg-[#ef4444]/25 px-2.5 py-1 text-[9px] font-bold uppercase tracking-[0.12em] text-[#fca5a5] sm:left-6 sm:top-6 sm:px-3 sm:text-[10px] sm:tracking-[0.15em]">
-                        Initial Launch Focus
+                        Primary Service Focus
                       </span>
                     ) : null}
                   </div>

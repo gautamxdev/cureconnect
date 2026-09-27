@@ -5,8 +5,9 @@ import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "About Us",
+  alternates: { canonical: "/about" },
   description:
-    "Learn about Cure Connect, an integrated healthcare technology platform operated by PHDC PRIVATE LIMITED, launching soon in Nashik.",
+    "Learn about Cure Connect, an integrated healthcare technology platform operated by PHDC PRIVATE LIMITED across India.",
 };
 
 const chapters = [

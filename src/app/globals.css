@@ -35,6 +35,10 @@
 html {
   scroll-behavior: smooth;
   overflow-x: clip;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+  -webkit-tap-highlight-color: transparent;
 }
 
 body {
@@ -42,6 +46,18 @@ body {
   color: var(--text);
   font-family: var(--font-body), system-ui, sans-serif;
   overflow-x: clip;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3 {
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
 }
 
 ::selection {
@@ -178,9 +194,16 @@ body {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
   .connection-line {
     animation: none;
     stroke-dasharray: none;
+  }
+  .marquee-track,
+  .launch-pulse {
+    animation: none;
   }
 }
 
@@ -220,6 +243,19 @@ body {
 .phone-frame img {
   border-radius: clamp(1.9rem, 7.4vw, 2.75rem);
   vertical-align: top;
+}
+
+.phone-frame-dashboard {
+  background: linear-gradient(145deg, #303034 0%, #111114 14%, #08080a 86%, #252529 100%);
+  padding: clamp(5px, 2%, 8px);
+}
+
+.phone-frame-dashboard::after {
+  display: none;
+}
+
+.phone-frame-dashboard img {
+  border-radius: clamp(1.85rem, 7vw, 2.6rem);
 }
 
 /* Side buttons: mute + volume (left) */

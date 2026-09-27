@@ -15,7 +15,7 @@ const categories = [
 ] as const;
 
 const fieldClass =
-  "mt-1.5 w-full rounded-xl border border-white/12 bg-black/30 px-4 py-3.5 text-white outline-none transition placeholder:text-white/35 focus:border-[var(--cure-green)]/50 focus:ring-1 focus:ring-[var(--cure-green)]/40";
+  "mt-1.5 w-full rounded-xl border border-white/12 bg-black/30 px-4 py-3.5 text-white outline-none transition placeholder:text-white/40 focus:border-[var(--cure-green)]/50 focus:ring-1 focus:ring-[var(--cure-green)]/40";
 
 export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false);
@@ -61,7 +61,7 @@ export default function ContactPage() {
           <FadeIn>
             <div className="glass h-full rounded-[1.75rem] p-6 sm:p-8">
               <h2 className="font-display text-2xl font-medium text-white">Cure Connect</h2>
-              <p className="mt-1 text-sm text-white/45">{siteConfig.legalName}</p>
+              <p className="mt-1 text-sm text-white/50">{siteConfig.legalName}</p>
               <p className="mt-6 flex items-start gap-2 text-sm text-white/65">
                 <MapPin size={16} className="mt-0.5 text-[var(--cure-green)]" />
                 {siteConfig.location}
@@ -106,34 +106,38 @@ export default function ContactPage() {
               aria-label="Partnership Inquiry"
             >
               <div className="grid gap-4 sm:grid-cols-2">
-                <label className="block text-sm text-white/55">
+                <label className="block text-sm text-white/65">
                   Your name
                   <input
                     name="name"
+                    autoComplete="name"
                     required
                     placeholder="Your name"
                     className={fieldClass}
                   />
                 </label>
-                <label className="block text-sm text-white/55">
+                <label className="block text-sm text-white/65">
                   Email address
                   <input
                     name="email"
                     type="email"
+                    autoComplete="email"
+                    inputMode="email"
                     required
                     placeholder="Email address"
                     className={fieldClass}
                   />
                 </label>
-                <label className="block text-sm text-white/55 sm:col-span-2">
+                <label className="block text-sm text-white/65 sm:col-span-2">
                   Organization (optional)
                   <input
                     name="organization"
+                    autoComplete="organization"
                     placeholder="Organization (optional)"
                     className={fieldClass}
                   />
                 </label>
-                <label className="block text-sm text-white/55 sm:col-span-2">
+                <label className="block text-sm text-white/65 sm:col-span-2">
                   Category
                   <select
                     name="category"
@@ -148,7 +152,7 @@ export default function ContactPage() {
                     ))}
                   </select>
                 </label>
-                <label className="block text-sm text-white/55 sm:col-span-2">
+                <label className="block text-sm text-white/65 sm:col-span-2">
                   Message
                   <textarea
                     name="message"
@@ -161,7 +165,7 @@ export default function ContactPage() {
               </div>
               <button
                 type="submit"
-                className="mt-6 inline-flex w-full items-center justify-center rounded-full bg-[var(--cure-green)] px-6 py-3.5 text-sm font-semibold text-white shadow-[0_10px_40px_-8px_rgba(16,185,129,0.55)] transition hover:brightness-110"
+                className="mt-6 inline-flex min-h-12 w-full items-center justify-center rounded-full bg-[var(--cure-green)] px-6 py-3.5 text-sm font-semibold text-white shadow-[0_10px_40px_-8px_rgba(16,185,129,0.55)] transition hover:brightness-110"
               >
                 Send Message
               </button>

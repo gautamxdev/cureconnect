@@ -10,7 +10,7 @@ const services = [
       "Connect with ambulance services when timely emergency transportation matters most.",
     icon: Ambulance,
     tone: "red" as const,
-    badge: "Initial Launch Focus",
+    badge: "Primary Service Focus",
   },
   {
     title: "Doctor Appointments",

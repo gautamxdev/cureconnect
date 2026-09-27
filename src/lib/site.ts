@@ -1,12 +1,13 @@
 export const siteConfig = {
   name: "Cure Connect",
+  siteUrl: "https://cureconnect.app",
   wordmark: { cure: "Cure", connect: "Connect" },
   legalName: "PHDC PRIVATE LIMITED",
   founder: "Gauri Kolhe",
   founderTitle: "Founder, Cure Connect",
   email: "cureconnect.app@gmail.com",
-  location: "Nashik, Maharashtra, India",
-  launchCity: "Nashik",
+  location: "India",
+  serviceRegion: "India",
   tagline: "Emergency Response and Daily Healthcare Platform",
   shortTagline: "Healthcare, Connected.",
   description:
@@ -18,6 +19,10 @@ export const siteConfig = {
     "https://chat.whatsapp.com/Lfjc3lKBhrL4qn9Chwjy3q?s=qt&p=i&ilr=0&amv=2",
   instagramUrl:
     "https://www.instagram.com/cureconnect.app?igsh=emRjeWx2ZWI0c2d3&utm_source=qr",
+  patientAppUrl:
+    "https://play.google.com/store/apps/details?id=cureconnect.app&pcampaignid=web_share",
+  driverAppUrl:
+    "https://play.google.com/store/apps/details?id=cureconnect.driverapp&pcampaignid=web_share",
   platforms: ["Android", "iOS"] as const,
   nav: [
     { label: "Home", href: "/" },

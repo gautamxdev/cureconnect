@@ -1,5 +1,5 @@
 export function NetworkTrust() {
-  const text = "Currently building relationships with multispeciality hospitals in Nashik";
+  const text = "Currently building relationships with multispeciality hospitals across India";
   const items = Array.from({ length: 8 }, () => text);
 
   return (
@@ -9,7 +9,7 @@ export function NetworkTrust() {
           {[...items, ...items].map((item, i) => (
             <span
               key={`${item}-${i}`}
-              className="inline-flex items-center gap-3 text-sm text-white/45"
+              className="inline-flex items-center gap-3 text-sm text-white/60"
             >
               <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-[var(--cure-green)]" />
               {item}

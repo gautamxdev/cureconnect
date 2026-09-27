@@ -5,9 +5,15 @@ type BrandLogoProps = {
   href?: string;
   size?: "sm" | "md";
   className?: string;
+  priority?: boolean;
 };
 
-export function BrandLogo({ href = "/", size = "md", className = "" }: BrandLogoProps) {
+export function BrandLogo({
+  href = "/",
+  size = "md",
+  className = "",
+  priority = false,
+}: BrandLogoProps) {
   const iconHeight = size === "sm" ? 40 : 48;
   const iconWidth = Math.round(iconHeight * 1.12);
   const iconClass =
@@ -22,7 +28,7 @@ export function BrandLogo({ href = "/", size = "md", className = "" }: BrandLogo
         width={iconWidth}
         height={iconHeight}
         className={`shrink-0 object-contain ${iconClass}`}
-        priority
+        priority={priority}
       />
       <span className={`font-display ${text} font-semibold tracking-tight`}>
         <span className="text-white">Cure</span>

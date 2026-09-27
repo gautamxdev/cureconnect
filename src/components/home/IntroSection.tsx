@@ -27,7 +27,7 @@ export function IntroSection() {
                 </span>
               ))}
               <span className="rounded-full border border-[var(--cure-green)]/25 bg-[var(--cure-green)]/10 px-3.5 py-1.5 text-xs font-medium text-[var(--cure-green-bright)]">
-                Nashik, India
+                India
               </span>
             </div>
           </FadeIn>

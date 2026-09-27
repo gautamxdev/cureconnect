@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Playfair_Display, Plus_Jakarta_Sans } from "next/font/google";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { siteConfig } from "@/lib/site";
 import "./globals.css";
 
 export const viewport: Viewport = {
@@ -24,19 +25,19 @@ const jakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://cureconnect.app"),
+  metadataBase: new URL(siteConfig.siteUrl),
   title: {
     default: "Cure Connect | Connected Healthcare Platform | PHDC PRIVATE LIMITED",
     template: "%s | Cure Connect",
   },
   description:
-    "Cure Connect is an integrated healthcare platform connecting patients, ambulances, hospitals, doctors, and diagnostic centers through one connected healthcare ecosystem. Launching soon.",
+    "Cure Connect is live now, connecting patients, ambulances, hospitals, doctors, and diagnostic centers across India through one connected healthcare ecosystem.",
   keywords: [
     "Cure Connect",
     "Cure Connect healthcare",
-    "Cure Connect Nashik",
-    "Healthcare platform Nashik",
-    "Ambulance services Nashik",
+    "Cure Connect India",
+    "Healthcare platform India",
+    "Ambulance services India",
     "Healthcare technology India",
     "Emergency ambulance services",
     "Doctor appointment platform",
@@ -46,16 +47,18 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Cure Connect | Connected Healthcare Platform | PHDC PRIVATE LIMITED",
     description:
-      "An integrated healthcare platform connecting patients, ambulances, hospitals, doctors, and diagnostic centers. Launching soon in Nashik.",
+      "An integrated healthcare platform connecting patients, ambulances, hospitals, doctors, and diagnostic centers across India.",
     type: "website",
     locale: "en_IN",
     siteName: "Cure Connect",
+    images: [{ url: "/icon-512.png", width: 512, height: 512, alt: "Cure Connect logo" }],
   },
   twitter: {
-    card: "summary_large_image",
+    card: "summary",
     title: "Cure Connect | Connected Healthcare Platform",
     description:
-      "Emergency Response and Daily Healthcare Platform by PHDC PRIVATE LIMITED. Launching soon in Nashik.",
+      "Emergency Response and Daily Healthcare Platform by PHDC PRIVATE LIMITED, serving India.",
+    images: ["/icon-512.png"],
   },
   icons: {
     icon: [

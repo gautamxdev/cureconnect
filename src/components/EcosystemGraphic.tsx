@@ -85,7 +85,7 @@ export function EcosystemGraphic({ className = "", compact = false }: EcosystemG
       className={`relative overflow-hidden rounded-[1.5rem] border border-white/10 bg-[#0b0d0c] p-3 shadow-[0_24px_60px_rgba(0,0,0,0.45)] backdrop-blur-xl sm:rounded-[1.75rem] sm:p-6 ${className}`}
     >
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(16,185,129,0.14),transparent_58%)]" />
-      <p className="relative mb-3 px-1 text-center text-[9px] font-semibold uppercase tracking-[0.16em] text-white/40 sm:mb-5 sm:text-[10px] sm:tracking-[0.18em]">
+      <p className="relative mb-3 px-1 text-center text-[10px] font-semibold uppercase tracking-[0.16em] text-white/50 sm:mb-5 sm:text-[11px] sm:tracking-[0.18em]">
         One Connected Healthcare Ecosystem
       </p>
 
@@ -177,7 +177,7 @@ export function EcosystemGraphic({ className = "", compact = false }: EcosystemG
                   <Icon size={14} strokeWidth={1.75} className="sm:hidden" />
                   <Icon size={22} strokeWidth={1.75} className="hidden sm:block" />
                 </div>
-                <span className="mt-1 max-w-[3.5rem] text-center text-[9px] font-medium leading-tight text-white/80 sm:mt-2 sm:max-w-none sm:text-xs sm:whitespace-nowrap md:text-[13px]">
+                <span className="mt-1 max-w-[4rem] text-center text-[10px] font-medium leading-tight text-white/80 sm:mt-2 sm:max-w-none sm:text-xs sm:whitespace-nowrap md:text-[13px]">
                   {node.label}
                 </span>
               </div>

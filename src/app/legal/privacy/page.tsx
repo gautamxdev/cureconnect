@@ -4,6 +4,7 @@ import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
+  alternates: { canonical: "/legal/privacy" },
   description: "Privacy Policy for Cure Connect, operated by PHDC PRIVATE LIMITED.",
 };
 

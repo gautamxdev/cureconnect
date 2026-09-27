@@ -4,6 +4,7 @@ import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Disclaimer",
+  alternates: { canonical: "/legal/disclaimer" },
   description: "Important disclaimer for Cure Connect and PHDC PRIVATE LIMITED.",
 };
 
@@ -23,11 +24,10 @@ export default function DisclaimerPage() {
             not be relied upon as a substitute for professional medical care. In an emergency,
             please contact local emergency services.
           </p>
-          <h2 className="font-display text-xl font-medium text-white">Pre-Launch Status</h2>
+          <h2 className="font-display text-xl font-medium text-white">Service Status</h2>
           <p>
-            Cure Connect is launching soon. Services described are planned offerings. We do not
-            guarantee response times, availability, or coverage of any service unless expressly and
-            officially confirmed.
+            Cure Connect is live now. Service response times, availability, and coverage may vary
+            and are only guaranteed when expressly and officially confirmed.
           </p>
           <h2 className="font-display text-xl font-medium text-white">Contact</h2>
           <p>

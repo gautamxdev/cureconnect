@@ -20,7 +20,7 @@ export function PageHero({ eyebrow, title, subtitle, children }: PageHeroProps) 
                 {eyebrow}
               </p>
             ) : null}
-            <h1 className="font-display text-4xl font-medium tracking-tight text-white sm:text-5xl lg:text-[3.25rem] lg:leading-[1.1]">
+            <h1 className="font-display text-[2rem] font-medium leading-[1.12] tracking-tight text-white sm:text-5xl lg:text-[3.25rem] lg:leading-[1.1]">
               {title}
             </h1>
             {subtitle ? (

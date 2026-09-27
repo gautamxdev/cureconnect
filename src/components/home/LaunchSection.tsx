@@ -12,17 +12,17 @@ export function LaunchSection() {
           <div className="glass-green mx-auto max-w-4xl rounded-2xl px-5 py-10 text-center sm:rounded-[2rem] sm:px-12 sm:py-16">
             <span className="mb-6 inline-flex items-center gap-2 rounded-full border border-[var(--cure-green)]/40 bg-[var(--cure-green)]/15 px-3.5 py-1.5 text-[11px] font-semibold uppercase tracking-[0.18em] text-[var(--cure-green-bright)]">
               <span className="launch-pulse h-1.5 w-1.5 rounded-full bg-[var(--cure-green-bright)]" />
-              Launching Soon
+              Live Now
             </span>
             <h2 className="font-display text-3xl font-medium tracking-tight text-white sm:text-4xl md:text-5xl">
-              Cure Connect is Launching Soon!
+              Cure Connect is Live Now!
             </h2>
             <p className="mt-3 text-lg text-white/70">
-              Starting our journey in {siteConfig.launchCity}.
+              Serving communities across {siteConfig.serviceRegion}.
             </p>
             <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-white/60">
-              We are preparing to bring Cure Connect&apos;s connected healthcare ecosystem to users,
-              beginning with a focus on emergency ambulance services.
+              Cure Connect&apos;s connected healthcare ecosystem is now available, with a focus on
+              emergency ambulance services.
             </p>
             <p className="mt-8 text-sm font-medium text-white/85">
               Want to be part of our healthcare network?

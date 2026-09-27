@@ -4,6 +4,7 @@ import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Terms & Conditions",
+  alternates: { canonical: "/legal/terms" },
   description: "Terms and Conditions for the Cure Connect organization website.",
 };
 
@@ -20,12 +21,12 @@ export default function TermsPage() {
           <h2 className="font-display text-xl font-medium text-white">Website Use</h2>
           <p>
             This website is provided for informational purposes to introduce Cure Connect and its
-            upcoming services. By using this website, you agree to use it lawfully and respectfully.
+            services. By using this website, you agree to use it lawfully and respectfully.
           </p>
-          <h2 className="font-display text-xl font-medium text-white">Pre-Launch Information</h2>
+          <h2 className="font-display text-xl font-medium text-white">Service Information</h2>
           <p>
-            Cure Connect is preparing for launch. Information on this website describes intended
-            services and vision and may evolve as the platform develops.
+            Cure Connect is live now. Information on this website describes our services and vision
+            and may evolve as the platform develops.
           </p>
           <h2 className="font-display text-xl font-medium text-white">Partnerships</h2>
           <p>

@@ -19,8 +19,9 @@ import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Partner With Us",
+  alternates: { canonical: "/partner" },
   description:
-    "Become a Cure Connect partner. Join hospitals, ambulance providers, doctors, and diagnostic centers building a connected healthcare ecosystem in Nashik.",
+    "Become a Cure Connect partner. Join hospitals, ambulance providers, doctors, and diagnostic centers building a connected healthcare ecosystem across India.",
 };
 
 const partners = [
@@ -174,7 +175,7 @@ export default function PartnerPage() {
               </p>
               <p className="font-display text-2xl font-medium leading-[1.35] text-white sm:text-3xl md:text-[2.15rem] md:leading-[1.4]">
                 Cure Connect is currently building relationships with multispeciality hospitals and
-                healthcare providers in Nashik as we prepare for launch.
+                healthcare providers as we expand our network across India.
               </p>
             </div>
           </FadeIn>
@@ -191,7 +192,7 @@ export default function PartnerPage() {
                   className="w-full max-w-sm sm:w-auto"
                 />
               </div>
-              <p className="mx-auto mt-5 max-w-xl text-sm text-white/55">
+              <p className="mx-auto mt-5 max-w-xl text-sm text-white/60">
                 Registration takes place through our dedicated partner registration platform.
               </p>
             </div>

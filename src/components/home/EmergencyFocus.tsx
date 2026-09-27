@@ -24,17 +24,17 @@ export function EmergencyFocus() {
         <FadeIn>
           <div className="mx-auto mb-4 flex justify-center">
             <span className="rounded-full border border-[var(--cure-red)]/35 bg-[var(--cure-red)]/15 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.16em] text-[#fca5a5]">
-              Initial Launch Focus
+              Primary Service Focus
             </span>
           </div>
           <h2 className="font-display mx-auto max-w-3xl text-center text-3xl font-medium tracking-tight text-white sm:text-4xl md:text-[2.65rem]">
             Starting With Emergency Healthcare
           </h2>
           <p className="mx-auto mt-4 max-w-3xl text-center text-base leading-relaxed text-white/60">
-            At launch, Cure Connect is focusing on emergency ambulance services, with the goal of
+            Cure Connect focuses on emergency ambulance services, with the goal of
             helping people access timely transportation support when it matters most.
           </p>
-          <p className="mx-auto mt-4 max-w-3xl text-center text-base leading-relaxed text-white/55">
+          <p className="mx-auto mt-4 max-w-3xl text-center text-base leading-relaxed text-white/60">
             Healthcare emergencies can be stressful and time-sensitive. Cure Connect aims to
             simplify the process of finding and connecting with ambulance services through
             technology.
@@ -50,7 +50,7 @@ export function EmergencyFocus() {
                 className="flex w-full flex-col items-center md:w-auto md:flex-1 md:flex-row"
               >
                 <motion.div
-                  className={`flex w-full max-w-xs flex-row items-center gap-3 rounded-2xl px-4 py-3.5 sm:max-w-sm sm:gap-3.5 sm:px-5 sm:py-4 md:mx-auto md:max-w-[170px] md:flex-col md:items-center md:gap-3 md:py-5 ${
+                  className={`flex w-full max-w-sm flex-row items-center justify-center gap-3 rounded-2xl px-4 py-3.5 sm:gap-3.5 sm:px-5 sm:py-4 md:mx-auto md:max-w-[170px] md:flex-col md:items-center md:gap-3 md:py-5 ${
                     step.tone === "red" ? "glass-red" : "glass-green"
                   }`}
                   initial={reduceMotion ? false : { opacity: 0, y: 16 }}

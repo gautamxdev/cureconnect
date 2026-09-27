@@ -24,21 +24,21 @@ export function Footer() {
     <footer className="relative border-t border-white/10 bg-[#040b08]">
       <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[var(--cure-green)]/40 to-transparent" />
       <div className="container-cc section-pad !pb-[max(2.5rem,env(safe-area-inset-bottom))] !pt-14">
-        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-12">
-          <div className="lg:col-span-5">
+        <div className="grid grid-cols-2 gap-x-6 gap-y-10 lg:grid-cols-12">
+          <div className="col-span-2 lg:col-span-5">
             <BrandLogo />
             <p className="mt-4 font-display text-2xl text-white">{siteConfig.shortTagline}</p>
-            <p className="mt-3 max-w-sm text-sm leading-relaxed text-white/55">
+            <p className="mt-3 max-w-sm text-sm leading-relaxed text-white/60">
               An integrated healthcare platform by {siteConfig.legalName}. Connecting patients,
               ambulances, hospitals, doctors, and diagnostic centers.
             </p>
             <div className="mt-5 flex flex-wrap gap-2">
               <span className="rounded-full border border-[var(--cure-green)]/30 bg-[var(--cure-green)]/10 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.16em] text-[var(--cure-green-bright)]">
-                Launching Soon
+                Live Now
               </span>
               <span className="inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.14em] text-white/65">
                 <MapPin size={11} />
-                Starting in Nashik
+                India
               </span>
             </div>
           </div>
@@ -47,12 +47,12 @@ export function Footer() {
             <h3 className="mb-4 text-[11px] font-semibold uppercase tracking-[0.18em] text-white/40">
               Explore
             </h3>
-            <ul className="space-y-2.5">
+            <ul className="space-y-1">
               {siteConfig.nav.map((item) => (
                 <li key={item.href}>
                   <Link
                     href={item.href}
-                    className="text-sm text-white/65 transition hover:text-[var(--cure-green)]"
+                    className="inline-block py-1.5 text-sm text-white/65 transition hover:text-[var(--cure-green)]"
                   >
                     {item.label}
                   </Link>
@@ -67,11 +67,11 @@ export function Footer() {
             </h3>
             <a
               href={`mailto:${siteConfig.email}`}
-              className="mb-3 break-all text-sm text-white/70 transition-colors hover:text-[var(--cure-green)]"
+              className="mb-2 inline-block break-all py-1.5 text-sm text-white/70 transition-colors hover:text-[var(--cure-green)]"
             >
               {siteConfig.email}
             </a>
-            <p className="text-sm text-white/50">{siteConfig.location}</p>
+            <p className="text-sm text-white/60">{siteConfig.location}</p>
             <div className="mt-5 flex gap-3">
               <a
                 href={siteConfig.instagramUrl}
@@ -96,15 +96,15 @@ export function Footer() {
         </div>
 
         <div className="mt-12 flex flex-col gap-4 border-t border-white/10 pt-8 md:flex-row md:items-center md:justify-between">
-          <p className="text-xs text-white/35">
+          <p className="text-xs text-white/45">
             © 2026 {siteConfig.legalName}. All rights reserved.
           </p>
-          <ul className="flex flex-wrap gap-x-5 gap-y-2">
+          <ul className="flex flex-wrap gap-x-5 gap-y-1">
             {siteConfig.footerLegal.map((item) => (
               <li key={item.href}>
                 <Link
                   href={item.href}
-                  className="text-xs text-white/40 transition hover:text-white/75"
+                  className="inline-block py-1.5 text-xs text-white/50 transition hover:text-white/80"
                 >
                   {item.label}
                 </Link>
