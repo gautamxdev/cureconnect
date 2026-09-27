@@ -8,20 +8,24 @@ This is the company/marketing site (not the patient app, not the partner registr
 
 ```bash
 npm install
-cp .env.example .env.local
-# Edit NEXT_PUBLIC_PARTNER_REGISTRATION_URL in .env.local
 npm run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000).
 
-## Partner registration URL
+## Links and site settings
 
-All **Become a Partner** buttons use:
+All links live in `src/lib/site.ts`: the site address (`siteUrl`), the **Become a Partner** link (`partnerRegistrationUrl`), the Play Store apps, WhatsApp, Instagram, and the contact email.
 
-`NEXT_PUBLIC_PARTNER_REGISTRATION_URL`
+## Deploying to Cloudflare Pages
 
-Set this in `.env.local` before launch.
+Cloudflare Pages hosts the static build:
+
+```bash
+npm run build:static
+```
+
+This writes the site to `out/`. In Cloudflare Pages, use `npm run build:static` as the build command and `out` as the output directory, or upload the `out/` folder directly. Next.js needs Node 20.9 or newer.
 
 ## Stack
 
@@ -37,10 +41,10 @@ Set this in `.env.local` before launch.
 - `/about` About Us
 - `/services` Our Services
 - `/partner` Partner With Us
-- `/our-story` Our Story
+- `/story` Our Story
 - `/contact` Contact Us
-- `/privacy` `/terms` `/disclaimer`
+- `/legal/privacy` `/legal/terms` `/legal/disclaimer`
 
 ## Brand assets
 
-Official logo, app dashboard reference, and founder photo live in `public/images/`.
+The logo, app dashboard screenshot, founder photo, and other images live in `public/images/`.
